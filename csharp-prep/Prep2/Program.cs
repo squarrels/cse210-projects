@@ -9,7 +9,7 @@ class Program
         string gradeFromUser = Console.ReadLine();
         int gradeValue = int.Parse(gradeFromUser);
 
-        string gradeLetter = "";
+        string gradeLetter;
         if (gradeValue >= 90)
         {
             gradeLetter = "A";
@@ -46,5 +46,14 @@ class Program
         }
 
         Console.WriteLine($"Your grade is {gradeLetter}{gradeSign}.");
+
+        if (gradeValue >= 70)
+        {
+            Console.WriteLine("You passed! Great job!");
+        }
+        else
+        {
+            Console.WriteLine("No trophy for you. Better luck next time!");
+        }
     }
 }
