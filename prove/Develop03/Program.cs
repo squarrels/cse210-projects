@@ -11,13 +11,15 @@ class Program
 
         string userInput = "yes";
         int verseLength = verse.GetVerseLength();
-        while (userInput == "yes")
+        while (userInput.ToLower() == "yes")
         {
+            Console.Clear();
             for (int i = 0; i <= 5; i++)
             {
                 verseLength -= 1;
                 if (verseLength < 0)
                 {
+                    verse.DisplayVerse();
                     Console.WriteLine("Cannot remove more words. Type 'quit' to exit");
                     break;
                 }
